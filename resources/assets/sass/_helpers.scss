@@ -1,0 +1,15 @@
+.is-padded-top {
+  margin-top: 50px;
+}
+
+.image-size-10-desktop {
+  @media screen and (min-width: 1024px) {
+    max-width: 10%;
+  }
+}
+
+.image-size-30-touch {
+  @media screen and (max-width: 1024px) {
+    max-width: 30%;
+  }
+}
