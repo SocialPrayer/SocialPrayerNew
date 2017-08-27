@@ -8,8 +8,37 @@
   }
 }
 
+.image-size-50-desktop {
+  @media screen and (min-width: 1024px) {
+    max-width: 50%;
+  }
+}
+
+.image-size-100-desktop {
+  @media screen and (min-width: 1024px) {
+    max-width: 100%;
+  }
+}
+
 .image-size-30-touch {
   @media screen and (max-width: 1024px) {
     max-width: 30%;
   }
+}
+
+.margin-sides-10 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.margin-tb-20-sides-10 {
+  margin: 20px 10px 20px 10px;
+}
+
+.teal-background {
+  background-color: $teal;
+}
+
+.full-height {
+  height: 100vh;
 }

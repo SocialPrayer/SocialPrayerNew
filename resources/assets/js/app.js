@@ -1,24 +1,19 @@
+import Vue from 'vue'
+import './bootstrap'
+import { sync } from 'vuex-router-sync'
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+import store from './store'
+import routes from './routes'
+import App from './components/App.vue'
+import makeRouter from './utils/router'
 
-require('./bootstrap');
+const router = makeRouter(routes)
 
-window.Vue = require('vue');
+sync(store, router)
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-Vue.component('prayer', require('./components/prayers/Prayer.vue'));
-Vue.component('welcome', require('./components/Welcome.vue'));
-Vue.component('navbar', require('./components/Navbar.vue'));
-Vue.component('login', require('./components/auth/Login.vue'));
-
-const app = new Vue({
-    el: '#app'
-});
+new Vue({
+  store,
+  router,
+  ...App,
+  el: '#app'
+})

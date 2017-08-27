@@ -2,7 +2,7 @@
 
 namespace SocialPrayer\Http\Controllers\Auth;
 
-use SocialPrayer\User;
+use SocialPrayer\Models\User;
 use SocialPrayer\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
